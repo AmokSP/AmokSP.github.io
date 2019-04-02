@@ -1,0 +1,28 @@
+html,
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    margin: 0px;
+    font-family: PingFang SC，MicrosoftYaHei, Helvetica;
+    overflow: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+li {list-style-type:none;}
+img {
+    pointer-events: none;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

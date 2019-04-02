@@ -1,1 +1,95 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>amok-home</title><link href=/static/css/app.6e7e1ac8014c06cffdc74dd2e7fe35d5.css rel=stylesheet></head><style></style><body><div id=textCanvas></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.2ee4d56d472e807787e0.js></script><script type=text/javascript src=/static/js/app.e6570a5407dfdae42fd5.js></script></body></html>
+<!doctype html>
+<html lang="utf-8">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <meta name="author" content="AMOKSP">
+    <title>球球打砖块</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/physicball.css">
+    <script src="js_plugin/sketch.min.js"></script>
+    <!-- 
+    <script src="js_plugin/matter-dev.js"></script>
+     -->
+    <script src="js_plugin/common.js"></script>
+    <script src="js_plugin/howler.core.js"></script>
+    <script src="js_plugin/EasePack.min.js"></script>
+    <script src="js_plugin/TweenLite.min.js"></script>
+    <script src="js_plugin/CSSPlugin.min.js"></script>
+    <script src="js_plugin/matter.min.js"></script>
+    <script src="js_plugin/decomp.js"></script>
+
+    <script src="js/Particle.js"></script>
+
+</head>
+
+<body>
+
+
+    <canvas id="gameContainer">
+
+    </canvas>
+    <div id="topPanel">
+            <div id="score"></div>
+        <i id="" class=" btPause fa fa-pause-circle fa-2x"></i>
+    </div>
+    <i id="" class="btForward fa fa-forward fa-2x"></i>
+    <div id="bottomPanel">
+    </div>
+    <div id="pauseMenu" class="menu">
+        <ul class="menu-ul"><!-- 
+            <li id="" class="btShare btn">
+                <i class="fa fa-share-alt "></i>
+                &nbsp;SHARE
+            </li> -->
+            <li style="text-align: center;font-size: 25px;text-indent: 0px;">
+                    PAUSE
+                </li>
+            <li id="" class="btReplay btn">
+                <i class="fa fa-undo "></i>
+
+                &nbsp;REPLAY
+            </li>
+            <li id="" class="btResume btn">
+                <i class=" fa fa-play"></i>
+                &nbsp;RESUME
+            </li>
+        </ul>
+    </div>
+    <div id="gameoverMenu" class="menu">
+        <ul class="menu-ul">
+            <li style="text-align: center;font-size: 25px;text-indent: 0px;">
+                GAME  OVER
+            </li>
+            <li id="goScore" style="text-align: center;text-indent: 0px;">
+                
+            </li>
+            <li id="" class="btShare btn">
+                <i class="fa fa-share-alt "></i>
+                &nbsp;SHARE
+            </li>
+            <li id="" class="btReplay btn">
+                <i class="fa fa-undo "></i>
+
+                &nbsp;REPLAY
+            </li>
+        </ul>
+    </div>
+    <div id="mainMenu">
+
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/Ball.js"></script>
+    <script src="js/Brick.js"></script>
+    <script src="js/game.js"></script>
+    <!-- 
+    <script src="js/game_infinity.js"></script>
+     -->
+</body>
+
+</html>
