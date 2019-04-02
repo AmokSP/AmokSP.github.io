@@ -20,12 +20,14 @@ var roundScore = 0;
 var roundHit = 0;
 
 
+
+
 newGame();
 
 startListening();
 
 
-
+var isTouch = window.hasOwnProperty("ontouchstart");
 
 
 $(function () {
@@ -46,14 +48,17 @@ $(function () {
         $("#gameoverMenu").hide();
         newGame();
     });
+    
 
-    canvas.addEventListener("touchstart", function (e) {
+    
+
+    canvas.addEventListener(isTouch?"touchstart":"mousedown", function (e) {
         e.preventDefault();
         if (!touchable) {
             return;
         }
 
-        var location = getLocation(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+        var location = getLocation(isTouch?e.changedTouches[0].clientX:(e.clientX-$("#app").offset().left), isTouch?e.changedTouches[0].clientY:e.clientY);
 
 
         if (location.y > rigHeight - 30) {
@@ -73,10 +78,10 @@ $(function () {
         }
 
     });
-    canvas.addEventListener("touchmove", function (e) {
+    canvas.addEventListener(isTouch?"touchmove":"mousemove", function (e) {
         e.preventDefault();
 
-        var location = getLocation(e.touches[0].clientX, e.touches[0].clientY);
+        var location = getLocation(isTouch?e.touches[0].clientX:(e.clientX-$("#app").offset().left), isTouch?e.touches[0].clientY:e.clientY);
 
         if (!touchable) {
             return;
@@ -86,7 +91,6 @@ $(function () {
         }
 
         if (firedBalls.length != 0) {
-            indicator.visible = true;
             indicator.ox = firedBalls[0].body.position.x;
             indicator.oy = firedBalls[0].body.position.y;
             indicator.tx = location.x;
@@ -97,7 +101,7 @@ $(function () {
         }
 
     });
-    canvas.addEventListener("touchend", function (e) {
+    canvas.addEventListener(isTouch?"touchend":"mouseup", function (e) {
         console.log(touchable);
         if (!touchable) {
             return;
@@ -111,7 +115,7 @@ $(function () {
         var ballOx = Ball.pool[0].body.position.x;
         var ballOy = Ball.pool[0].body.position.y;
 
-        var location = getLocation(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+        var location = getLocation(isTouch?e.changedTouches[0].clientX:(e.clientX-$("#app").offset().left), isTouch?e.changedTouches[0].clientY:e.clientY);
 
         if (location.y > rigHeight - 30) {
             location.y = rigHeight - 30;

@@ -161,13 +161,6 @@ function getLocation(x, y) {
     return {
         x: (x) * scale,
         y: (y - $("#gameContainer").offset().top) * scale
-
-        /*  
-         * 此处不用下面两行是为了防止使用CSS和JS改变了canvas的高宽之后是表面积拉大而实际  
-         * 显示像素不变而造成的坐标获取不准的情况  
-        x: (x - bbox.left),  
-        y: (y - bbox.top)  
-        */
     };
 }
 

@@ -1,12 +1,12 @@
 html,
 body {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
     background-color: #333;
-    margin: 0px;
     font-family: PingFang SC，MicrosoftYaHei, Helvetica;
     overflow: hidden;
     -webkit-text-size-adjust: 100%;
@@ -25,4 +25,5 @@ img {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    box-sizing: border-box;
 }
