@@ -1,0 +1,10 @@
+{
+  "skins": {},
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    {
+      "path": "resource/skins/ShipCTRL_Skin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"ShipCTRL_Skin\" width=\"1136\" height=\"640\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n\t<e:Group id=\"fireKit\" right=\"40\" bottom=\"30\">\n\t\t<e:Image id=\"fireRing\" source=\"btArea_png\" anchorOffsetX=\"100\" anchorOffsetY=\"100\" x=\"0\" y=\"0\"/>\n\t\t<e:Image id=\"fireThumb\" source=\"btFire_png\" x=\"0\" y=\"0\" anchorOffsetX=\"39\" anchorOffsetY=\"39\"/>\n\t</e:Group>\n\t<e:Group id=\"moveKit\" left=\"140\" bottom=\"30\">\n\t\t<e:Image id=\"moveRing\" source=\"btArea_png\" anchorOffsetX=\"100\" anchorOffsetY=\"100\" x=\"0\" y=\"0\"/>\n\t\t<e:Image id=\"moveThumb\" source=\"btMove_png\" x=\"0\" y=\"0\" anchorOffsetX=\"39\" anchorOffsetY=\"39\"/>\n\t</e:Group>\n\t<e:Image id=\"btShield\" source=\"btShield_png\" right=\"60\" bottom=\"256\"/>\n</e:Skin>"
+    }
+  ]
+}

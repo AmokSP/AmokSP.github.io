@@ -1,0 +1,146 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,btMove_png,btFire_png,btArea_png,ship_png,bullet_0_png,bullet_0_json,enemy_1_png,enemy_1_json,ash_png,ash_json,star3_png,star2_png,star1_png,btShield_png,player_1_png,player_1_json,shield_png,shield_json,e_bullet_0_png,e_bullet_0_json,gridframe_png,grid_png,powerups_png,powerups_json,radar_w_png,radar_r_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/btMove.png",
+			"type": "image",
+			"name": "btMove_png"
+		},
+		{
+			"url": "assets/btFire.png",
+			"type": "image",
+			"name": "btFire_png"
+		},
+		{
+			"url": "assets/btArea.png",
+			"type": "image",
+			"name": "btArea_png"
+		},
+		{
+			"url": "assets/ship.png",
+			"type": "image",
+			"name": "ship_png"
+		},
+		{
+			"url": "assets/bullet_0.png",
+			"type": "image",
+			"name": "bullet_0_png"
+		},
+		{
+			"url": "assets/bullet_0.json",
+			"type": "json",
+			"name": "bullet_0_json"
+		},
+		{
+			"url": "assets/enemy_1.png",
+			"type": "image",
+			"name": "enemy_1_png"
+		},
+		{
+			"url": "assets/enemy_1.json",
+			"type": "json",
+			"name": "enemy_1_json"
+		},
+		{
+			"url": "assets/ash.png",
+			"type": "image",
+			"name": "ash_png"
+		},
+		{
+			"url": "assets/ash.json",
+			"type": "json",
+			"name": "ash_json"
+		},
+		{
+			"url": "assets/star3.png",
+			"type": "image",
+			"name": "star3_png"
+		},
+		{
+			"url": "assets/star2.png",
+			"type": "image",
+			"name": "star2_png"
+		},
+		{
+			"url": "assets/star1.png",
+			"type": "image",
+			"name": "star1_png"
+		},
+		{
+			"url": "assets/btShield.png",
+			"type": "image",
+			"name": "btShield_png"
+		},
+		{
+			"url": "assets/player_1.png",
+			"type": "image",
+			"name": "player_1_png"
+		},
+		{
+			"url": "assets/player_1.json",
+			"type": "json",
+			"name": "player_1_json"
+		},
+		{
+			"url": "assets/shield.png",
+			"type": "image",
+			"name": "shield_png"
+		},
+		{
+			"url": "assets/shield.json",
+			"type": "json",
+			"name": "shield_json"
+		},
+		{
+			"url": "assets/e_bullet_0.png",
+			"type": "image",
+			"name": "e_bullet_0_png"
+		},
+		{
+			"url": "assets/e_bullet_0.json",
+			"type": "json",
+			"name": "e_bullet_0_json"
+		},
+		{
+			"url": "assets/gridframe.png",
+			"type": "image",
+			"name": "gridframe_png",
+			"scale9grid": "5,5,6,6"
+		},
+		{
+			"url": "assets/grid.png",
+			"type": "image",
+			"name": "grid_png"
+		},
+		{
+			"name": "powerups_png",
+			"type": "image",
+			"url": "assets/powerups.png"
+		},
+		{
+			"name": "powerups_json",
+			"type": "json",
+			"url": "assets/powerups.json"
+		},
+		{
+			"name": "radar_w_png",
+			"type": "image",
+			"url": "assets/radar_w.png"
+		},
+		{
+			"name": "radar_r_png",
+			"type": "image",
+			"url": "assets/radar_r.png"
+		}
+	]
+}

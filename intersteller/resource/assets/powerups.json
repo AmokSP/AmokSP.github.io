@@ -1,0 +1,31 @@
+﻿{
+"mc": {
+	"powerUps": {
+		"frameRate":60,
+		"labels": [
+			{"name":"shieldUp","frame":1},
+			{"name":"damageUp","frame":2},
+			{"name":"muiltiplierx2","frame":3},
+			{"name":"speedUp","frame":4},
+			{"name":"weapon_missle","frame":5},
+			{"name":"weapon_beam","frame":6}
+		],
+		"frames": [
+			{"res":"powerUps0000","x":-43.1,"y":-42.9},
+			{"res":"powerUps0001","x":-40.1,"y":-40.9},
+			{"res":"powerUps0002","x":-40.1,"y":-40.9},
+			{"res":"powerUps0003","x":-41.1,"y":-40.9},
+			{"res":"powerUps0004","x":-40.1,"y":-42.9},
+			{"res":"powerUps0005","x":-40.1,"y":-40.9}
+		]
+	}
+},
+"res": {
+	"powerUps0000":{"x":0,"y":0,"w":90,"h":88},
+	"powerUps0001":{"x":90,"y":0,"w":80,"h":80},
+	"powerUps0002":{"x":170,"y":0,"w":80,"h":84},
+	"powerUps0003":{"x":0,"y":88,"w":86,"h":80},
+	"powerUps0004":{"x":86,"y":88,"w":83,"h":90},
+	"powerUps0005":{"x":169,"y":88,"w":80,"h":80}
+}
+}
