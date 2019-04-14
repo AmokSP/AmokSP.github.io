@@ -32,3 +32,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0
 }
+
+.text-l{
+    font-size: 1.5rem;
+}
+.text-xl{
+    font-size: 2rem;
+}

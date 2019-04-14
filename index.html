@@ -22,33 +22,73 @@
             height: auto;
         }
 
+        /* 
+        body.open {
+            max-height: 100%;
+            overflow: hidden;
+        } */
+
+
         #nav {
             position: fixed;
-            font-size: 2rem;
-            line-height: 5rem;
             height: 5rem;
             padding: 0 1rem;
             width: 100%;
             background: #333;
-            color: #ddd;
             z-index: 100;
+            transition: 0.4s all;
+        }
+
+        #title {
+
+            font-size: 2rem;
+            line-height: 5rem;
+            color: #ddd;
+        }
+
+        .open #nav {
+            height: 25rem;
         }
 
         #head {
             position: absolute;
             top: 0;
             bottom: 0;
-            margin: auto 0;
+            margin-top: 1rem;
             right: 1rem;
             width: 3rem;
             height: 3rem;
 
-            border: 0.1rem solid rgb(195, 0, 255);
+            border: 0.2em solid rgb(255, 130, 72);
             border-radius: 100%;
             background: url('./img/me.jpg');
             background-position: center;
             background-size: 100%;
             background-repeat: no-repeat;
+            background-clip: padding-box;
+
+            transition: 0.3s ease-in-out;
+            z-index: 3;
+        }
+
+        #my-info {
+            color: #fff;
+            position: absolute;
+            background: #333;
+            overflow: hidden;
+            top: 1rem;
+            left: 0;
+            bottom: 4rem;
+            width: 100%;
+            padding: 0 1rem;
+            height: auto;
+            z-index: 2;
+        }
+
+        .open #head {
+            width: 8rem;
+            height: 8rem;
+
         }
 
         .p-list {
@@ -69,26 +109,28 @@
             max-height: 16rem;
             width: 100%;
             height: auto;
-            
+
             border-bottom: 1px solid #eee;
             border-top: 1px solid #eee;
             overflow: hidden;
 
-            background: url("https://loading.io/spinners/default/index.circle-dot-preloader.svg");
+            background: url("./img/index.circle-dot-preloader.svg");
             background-repeat: no-repeat;
             background-position: center;
         }
+
         .p-thumb img {
             position: relative;
-            width:100%;
-            top:-6rem;
-            bottom:-6rem;
-            margin:auto 0;
+            width: 100%;
+            top: -6rem;
+            bottom: -6rem;
+            margin: auto 0;
         }
 
         .p-card .p-name {
             font-size: 1.5rem;
             padding: 1rem;
+            font-weight: bold;
         }
 
         .p-card .p-desc {
@@ -98,19 +140,107 @@
             padding: 1rem;
         }
 
-        #end {
+        #footer {
             padding: 3rem;
             width: 100%;
             text-align: center;
             color: #ccc;
         }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 99;
+            visibility: hidden;
+            transition: all 0.2s;
+            opacity: 0;
+        }
+
+        .open #overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .skills div {
+            display: inline-block;
+            border: 2px #999 solid;
+            border-radius: 5rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        @media screen and (min-width:800px) {
+            .p-list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .p-card {
+                width: 300px;
+                flex-shrink: 0;
+                margin-right:1rem;
+                box-shadow: 0 0 2rem #eee;
+            }
+
+            #footer {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div id="overlay">
+
+    </div>
     <div id="nav">
-        Amok's Online Demos
-        <div id="head">
+        <div id="title">
+            Amok's Online Demos
+        </div>
+        <div id="head"></div>
+
+        <div id="my-info">
+            <p class="text-xl">
+                俞俊杰♂
+            </p>
+            <p>
+                89年生 WEB前端开发
+            </p>
+            <p>
+                上海理工大学 <br>
+                机械设计制造及自动化
+            </p>
+
+            <div class="skills" style="margin-top:3rem;">
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+
+                <div>TypeScript</div>
+
+                <div>ActionScript3.0</div>
+
+
+                <div>Vue</div>
+                <div>AngularJs</div>
+                <div>Egret</div>
+                <div>Nodejs</div>
+                <div>Express</div>
+                <div>Webpack</div>
+
+
+                <div>Bootstrap</div>
+                <div>ElementUI</div>
+                <div>Flash</div>
+                <div>Photoshop</div>
+
+
+            </div>
 
         </div>
     </div>
@@ -118,14 +248,14 @@
         <div class="p-card">
 
             <a href="https://amoksp.github.io/vuex_takeout">
-                
+
 
                 <div class="p-name">
 
-                        vuex练习
-                    </div>
+                    vuex练习
+                </div>
                 <div class="p-thumb">
-                    <img src="./img/vuex_takeout.jpg" alt="">
+                    <img class='lazyload' data-src="./img/vuex_takeout.jpg" alt="">
                 </div>
                 <div class="p-desc">
                     模仿外卖app商户页面，组件间通讯
@@ -139,7 +269,7 @@
                     打个砖块
                 </div>
                 <div class="p-thumb">
-                    <img src="./img/bricks.jpt.jpg" alt="">
+                    <img class='lazyload' data-src="./img/bricks.jpt.jpg" alt="">
                 </div>
                 <div class="p-desc">
                     Canvas渲染，Material.js物理引擎
@@ -154,7 +284,7 @@
                     打个飞机。。。。吧？
                 </div>
                 <div class="p-thumb">
-                    <img src="./img/shooting.jpg" alt="">
+                    <img class='lazyload' data-src="./img/shooting.jpg" alt="">
                 </div>
                 <div class="p-desc">
                     双摇杆平面射击，Egret游戏引擎，physics物理引擎，护盾、BUFF系统
@@ -162,11 +292,46 @@
             </a>
         </div>
     </div>
-    <div id="end">
+    <div id="footer">
         -----This is it, so far...-----
     </div>
 </body>
+<script src="./js/lazysizes.min.js"></script>
 <script>
+    var modalOpened = false;
+    var head = document.querySelector("#head");
+    var body = document.body;
+    var overlay = document.querySelector("#overlay");
+
+
+
+
+
+    head.addEventListener('click', headClick);
+    overlay.addEventListener('click', closeModal);
+
+    window.addEventListener("scroll", function () {
+        if (modalOpened) {
+            closeModal();
+        }
+    });
+
+    function headClick(e) {
+        if (modalOpened) {
+            closeModal();
+        } else {
+            openModal();
+        }
+    }
+    function openModal() {
+        body.classList.add("open");
+        modalOpened = true;
+    }
+    function closeModal() {
+        body.classList.remove("open");
+        modalOpened = false;
+    }
+
 
 
 </script>
