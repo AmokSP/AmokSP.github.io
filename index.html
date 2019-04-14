@@ -308,7 +308,9 @@
 
 
     head.addEventListener('click', headClick);
+    head.addEventListener('touchstart', headClick);
     overlay.addEventListener('click', closeModal);
+    overlay.addEventListener('touchstart', closeModal);
 
     window.addEventListener("scroll", function () {
         if (modalOpened) {
