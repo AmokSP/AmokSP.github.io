@@ -65,12 +65,18 @@
         }
 
         .p-thumb {
+            min-height: 16rem;
             max-height: 16rem;
             width: 100%;
             height: auto;
+            
             border-bottom: 1px solid #eee;
             border-top: 1px solid #eee;
             overflow: hidden;
+
+            background: url("https://loading.io/spinners/default/index.circle-dot-preloader.svg");
+            background-repeat: no-repeat;
+            background-position: center;
         }
         .p-thumb img {
             position: relative;
@@ -119,7 +125,7 @@
                         vuex练习
                     </div>
                 <div class="p-thumb">
-                    <img src="./img/vuex_takeout.jpg" alt="">
+                    <!-- <img src="./img/vuex_takeout.jpg" alt=""> -->
                 </div>
                 <div class="p-desc">
                     模仿外卖app商户页面，组件间通讯
