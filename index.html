@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="utf-8">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <meta name="author" content="AMOKSP">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./css/amok-reboot.css">
+    <link rel="stylesheet" href="./css/amok-responsive.css">
+    <style>
+        html,
+        body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        #nav {
+            position: fixed;
+            font-size: 2rem;
+            line-height: 5rem;
+            height: 5rem;
+            padding: 0 1rem;
+            width: 100%;
+            background: #333;
+            color: #ddd;
+            z-index: 100;
+        }
+
+        #head {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            right: 1rem;
+            width: 3rem;
+            height: 3rem;
+
+            border: 0.1rem solid rgb(195, 0, 255);
+            border-radius: 100%;
+            background: url('./img/me.jpg');
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .p-list {
+            margin-top: 5rem;
+            padding: 1rem;
+        }
+
+        .p-card {
+            border-radius: 0.3rem;
+            min-height: 20rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0.5rem 2rem #ddd;
+            overflow: hidden;
+        }
+
+        .p-thumb {
+            max-height: 16rem;
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #eee;
+            border-top: 1px solid #eee;
+            overflow: hidden;
+        }
+        .p-thumb img {
+            position: relative;
+            width:100%;
+            top:-6rem;
+            bottom:-6rem;
+            margin:auto 0;
+        }
+
+        .p-card .p-name {
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+
+        .p-card .p-desc {
+            font-size: 1rem;
+            color: #999;
+
+            padding: 1rem;
+        }
+
+        #end {
+            padding: 3rem;
+            width: 100%;
+            text-align: center;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        Amok's Online Demos
+        <div id="head">
+
+        </div>
+    </div>
+    <div class='p-list'>
+        <div class="p-card">
+
+            <a href="https://amoksp.github.io/vuex_takeout">
+                
+
+                <div class="p-name">
+
+                        vuex练习
+                    </div>
+                <div class="p-thumb">
+                    <img src="./img/vuex_takeout.jpg" alt="">
+                </div>
+                <div class="p-desc">
+                    模仿外卖app商户页面，组件间通讯
+                </div>
+            </a>
+        </div>
+        <div class="p-card">
+            <a href="https://amoksp.github.io/bricks">
+                <div class="p-name">
+
+                    打个砖块
+                </div>
+                <div class="p-thumb">
+                    <img src="./img/bricks.jpt.jpg" alt="">
+                </div>
+                <div class="p-desc">
+                    Canvas渲染，Material.js物理引擎
+                </div>
+
+            </a>
+        </div>
+        <div class="p-card">
+            <a href="https://amoksp.github.io/intersteller">
+                <div class="p-name">
+
+                    打个飞机。。。。吧？
+                </div>
+                <div class="p-thumb">
+                    <img src="./img/shooting.jpg" alt="">
+                </div>
+                <div class="p-desc">
+                    双摇杆平面射击，Egret游戏引擎，physics物理引擎，护盾、BUFF系统
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="end">
+        -----This is it, so far...-----
+    </div>
+</body>
+<script>
+
+
+</script>
+
+</html>
