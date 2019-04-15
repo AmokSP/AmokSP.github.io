@@ -66,6 +66,7 @@
             background-size: 100%;
             background-repeat: no-repeat;
             background-clip: padding-box;
+            cursor: pointer;
 
             transition: 0.3s ease-in-out;
             z-index: 3;
@@ -183,7 +184,7 @@
             .p-card {
                 width: 300px;
                 flex-shrink: 0;
-                margin-right:1rem;
+                margin-right: 1rem;
                 box-shadow: 0 0 2rem #eee;
             }
 
@@ -298,6 +299,7 @@
 </body>
 <script src="./js/lazysizes.min.js"></script>
 <script>
+    var isPC = !(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
     var modalOpened = false;
     var head = document.querySelector("#head");
     var body = document.body;
@@ -305,10 +307,16 @@
 
 
 
+    if (isPC) {
 
+        head.addEventListener('click', headClick);
+        overlay.addEventListener('click', closeModal);
+    } else {
 
-    head.addEventListener('click', headClick);
-    overlay.addEventListener('click', closeModal);
+        head.addEventListener('touchstart', headClick);
+        overlay.addEventListener('touchstart', closeModal);
+    }
+
 
     window.addEventListener("scroll", function () {
         if (modalOpened) {
